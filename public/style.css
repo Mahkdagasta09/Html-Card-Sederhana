@@ -1,0 +1,99 @@
+* {
+    box-sizing: border-box;
+  }
+  html,
+  body {
+    height: 100%;
+  }
+  body {
+    font-family: 'Roboto Condensed', sans-serif;
+  }
+  .card_wrap {
+    position: relative;
+    display: flex;
+    height: 100%;
+    background-color: #abffac;
+    
+  }
+  .card_wrap:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-size: auto 800px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+  }
+  .card_body {
+    position: relative;
+    margin: auto;
+    height: 0;
+    width: 360px;
+    box-shadow: -25px 25px 60px 5px rgba(0, 0, 0, 0.5), -60px 60px 100px 13px rgba(0, 0, 0, 0.27);
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+  }
+  .card_body .description,
+  .card_body .footer {
+    position: absolute;
+    left: 35px;
+    color: transparent;
+    transition: all 0.5s ease-in-out 0.5s;
+  }
+  .card_body .description {
+    top: 380px;
+  }
+  .card_body .footer {
+    bottom: 135px;
+  }
+
+  .card_body h1 {
+    text-transform: uppercase;
+  }
+  .card_body h3 {
+    font-weight: 300;
+  }
+  .card_body h2 {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  .card_body h1 {
+    font-weight: 600;
+    font-size: 34px;
+  }
+  
+  .card_body h4 {
+    font-weight: 400;
+    font-size: 20px;
+  }
+
+  .card_body b {
+    font-weight: 600;
+    margin-right: 5px;
+  }
+  .card_body-gradient {
+    position: absolute;
+    top: -290px;
+    height: 800px;
+    width: 100%;
+    background: linear-gradient(to bottom, rgba(201, 230, 255, 0.19) 100px, #28fe39 500px);
+    transition: top 0.3s ease-in-out 0.3s;
+  }
+  .card_body.active {
+    height: 510px;
+  }
+  .card_body.active .card_body-gradient {
+    top: 0;
+  }
+  .card_body.active .description {
+    top: 280px;
+    color: #000000;
+  }
+  .card_body.active .footer {
+    bottom: 35px;
+    color: #000000;
+  }
+
+  
+  
